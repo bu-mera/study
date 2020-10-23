@@ -1,0 +1,37 @@
+.list {
+  background-color: #fff;
+
+  &__item {
+    padding: 24px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    &__title {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      > span {
+        font-size: 14px;
+      }
+
+      > a {
+        color: #333;
+        font-weight: 700;
+        flex-grow: 1;
+        font-size: 1.6rem;
+
+        &:hover {
+          text-decoration: underline;
+          color: #777;
+        }
+      }
+    }
+
+    &__tags {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}

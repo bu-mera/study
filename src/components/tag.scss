@@ -1,0 +1,14 @@
+.tag {
+  background-color: #eee;
+  color: #666;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  margin-right: 8px;
+  font-size: 12px;
+
+  &:hover {
+    text-decoration: underline;
+    color: #333;
+  }
+}

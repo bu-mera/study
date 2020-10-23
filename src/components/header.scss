@@ -1,0 +1,83 @@
+@import './app.scss';
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: 56px;
+  background-color: #2b517a;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+
+  @include mq('sp') {
+    padding: 0 12px;
+  }
+
+  h1 {
+    margin: 0;
+    a {
+      font-size: 24px;
+      font-weight: normal;
+      color: #fff;
+    }
+  }
+
+  .icon {
+    display: none;
+    cursor: pointer;
+
+    @include mq('sp') {
+      display: block;
+    }
+
+    &__item {
+      width: 24px;
+      height: 2px;
+      border-radius: 1px;
+      background-color: #fff;
+      margin-bottom: 6px;
+      transition: all 0.3s ease;
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  &--show {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    .icon {
+      position: relative;
+      z-index: 999;
+      &__item {
+        opacity: 0;
+        // width: 24px;
+
+        &:first-child {
+          width: 23px;
+          opacity: 1;
+          transform: rotate(45deg);
+          transform-origin: left;
+        }
+
+        &:last-child {
+          width: 23px;
+          opacity: 1;
+          transform: rotate(-45deg);
+          transform-origin: left;
+        }
+      }
+    }
+  }
+}
