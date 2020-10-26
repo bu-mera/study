@@ -108,7 +108,7 @@ const SearchPage = (props) => {
           </div>
         </LayoutMain>
 
-        <LayoutAside />
+        {/*<LayoutAside />*/}
       </Layout>
     </Container>
   )

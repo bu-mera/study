@@ -27,7 +27,7 @@ const TagsPage = ({ data, pageContext }) => {
           <List items={ edges } />
         </LayoutMain>
 
-        <LayoutAside />
+        {/*<LayoutAside />*/}
       </Layout>
     </Container>
   )

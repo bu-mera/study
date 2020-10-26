@@ -26,7 +26,7 @@ const IndexPage = ({ data }) => {
           <List items={ edges } />
         </LayoutMain>
 
-        <LayoutAside />
+        {/*<LayoutAside />*/}
       </Layout>
     </Container>
   )

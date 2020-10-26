@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{w2l6:function(e,t,n){"use strict";n.r(t);var a=n("q1tI"),l=n.n(a),r=n("vrFN"),c=n("rY4l"),u=n("7oih"),E=n("tEFB");t.default=Object(a.memo)((function(){return l.a.createElement(u.a,null,l.a.createElement(r.a,{title:E.a.SITE_NAME+" | Brewus"}),l.a.createElement(c.a,null),l.a.createElement(u.b,null,l.a.createElement(u.c,null,l.a.createElement("h1",null,"ページがありません"))))}))}}]);
+//# sourceMappingURL=component---src-pages-404-js-1ba2ef53130c5bf2ec60.js.map

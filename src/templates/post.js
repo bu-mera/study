@@ -47,7 +47,7 @@ const PostPage = ({ data, location, pathContext }) => {
           </div>
         </LayoutMain>
 
-        <LayoutAside />
+        {/*<LayoutAside />*/}
       </Layout>
     </Container>
   )

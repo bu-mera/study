@@ -16,7 +16,7 @@ export default memo(() => {
           <h1>ページがありません</h1>
         </LayoutMain>
 
-        <LayoutAside />
+        {/*<LayoutAside />*/}
       </Layout>
     </Container>
   )
