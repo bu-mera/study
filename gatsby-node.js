@@ -96,16 +96,16 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         })
 
         // 検索に必要なjsonファイル生成
-        const searchJSON = posts.filter(({ node }) => node.frontmatter.active).map(({ node }, i) => {
-          return {
-            path    : node.fields.slug,
-            title   : node.frontmatter.title,
-            tags    : node.frontmatter.tags,
-            contents: node.html.replace(/\r?\n|<("[^"]*"|'[^']*'|[^'">])*>/g, '') // 改行コードとHTMLタグを除去
-          }
-        })
-
-        fs.writeFileSync('./public/static/search.json', JSON.stringify(searchJSON, null , 2))
+        // const searchJSON = posts.filter(({ node }) => node.frontmatter.active).map(({ node }, i) => {
+        //   return {
+        //     path    : node.fields.slug,
+        //     title   : node.frontmatter.title,
+        //     tags    : node.frontmatter.tags,
+        //     contents: node.html.replace(/\r?\n|<("[^"]*"|'[^']*'|[^'">])*>/g, '') // 改行コードとHTMLタグを除去
+        //   }
+        // })
+        //
+        // fs.writeFileSync('./public/static/search.json', JSON.stringify(searchJSON, null , 2))
       })
     )
   })
@@ -180,11 +180,11 @@ exports.onPostBuild = () => {
     silent: true,
   })
 
-  replace({
-    paths: globule.find([`./docs/**/*.html`, `./docs/*.html`]),
-    regex: 'action="/search',
-    replacement: 'action="href="https://bu-mera.github.io/study/search',
-    recursive: true,
-    silent: true,
-  })
+  // replace({
+  //   paths: globule.find([`./docs/**/*.html`, `./docs/*.html`]),
+  //   regex: 'action="/search',
+  //   replacement: 'action="href="https://bu-mera.github.io/study/search',
+  //   recursive: true,
+  //   silent: true,
+  // })
 }
