@@ -67,12 +67,12 @@ module.exports = {
         ]
       }
     },
-    {
-      resolve: `gatsby-plugin-canonical-urls`,
-      options: {
-        siteUrl: `https://bu-mera.github.io/study`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-canonical-urls`,
+    //   options: {
+    //     siteUrl: `https://bu-mera.github.io/study`,
+    //   },
+    // },
     `gatsby-plugin-sass`
     // `gatsby-plugin-offline`,
   ],

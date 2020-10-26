@@ -171,4 +171,12 @@ exports.onPostBuild = () => {
     recursive: true,
     silent: true,
   })
+
+  replace({
+    paths: filesMatched,
+    regex: 'href="',
+    replacement: 'href="https://bu-mera.github.io/study',
+    recursive: true,
+    silent: true,
+  })
 }
