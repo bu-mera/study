@@ -8,6 +8,8 @@
 
 const fs = require('fs')
 const fse = require('fs-extra')
+const replace = require('replace')
+const globule = require('globule')
 const path = require('path')
 const _ = require('lodash')
 const { createFilePath } = require('gatsby-source-filesystem')
@@ -112,6 +114,12 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 exports.onCreateNode = ({ node, actions, getNode, createNodeId }) => {
   const { createNodeField, createParentChildLink } = actions
 
+  // if (node.internal.type === 'File') {
+  //   node.root = '/study/'
+  //
+  //   console.log(node);
+  // }
+
   if (node.internal.type === 'MarkdownRemark') {
     const value = createFilePath({ node, getNode, trailingSlash: false })
     const number = Number(value.replace(/\//g, ''))
@@ -123,6 +131,8 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId }) => {
     })
   }
 }
+
+
 
 exports.onPreInit = () => {
   if (process.argv[2] === "build") {
@@ -144,8 +154,21 @@ exports.onPreInit = () => {
 
 exports.onPostBuild = () => {
   fs.renameSync(path.join(__dirname, "public"), path.join(__dirname, "docs"))
+
+  const filesMatched = globule.find([`./docs/post/**/*.html`, `./docs/*.js`, `./docs/*.map`])
+  console.log("filesMatched ************", filesMatched);
+
   // fs.renameSync(
   //   path.join(__dirname, "public_dev"),
   //   path.join(__dirname, "public")
   // )
+  // console.log(find(`${ path.join(__dirname, "docs", "post") }/**/*.html`));
+
+  replace({
+    paths: filesMatched,
+    regex: '/static',
+    replacement: 'https://bu-mera.github.io/study/static',
+    recursive: true,
+    silent: true,
+  })
 }

@@ -27,6 +27,7 @@ module.exports = {
       options: {
         plugins: [
           `gatsby-remark-code-titles`,
+
           // 行
           {
             resolve: `gatsby-remark-prismjs`,
@@ -43,12 +44,19 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 600,
+              tracedSVG: true
               // wrapperStyle: `width: auto;`
               // linkImagesToOriginal: false
               // backgroundColor: `none`,
               // loading: `eager`,
             }
           },
+          // {
+          //   resolve: `gatsby-plugin-canonical-urls`,
+          //   options: {
+          //     siteUrl: `https://bu-mera.github.io/study`,
+          //   },
+          // },
           // リンクを新規タブで開く
           {
             resolve: `gatsby-remark-external-links`,
@@ -58,6 +66,12 @@ module.exports = {
           }
         ]
       }
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://bu-mera.github.io/study`,
+      },
     },
     `gatsby-plugin-sass`
     // `gatsby-plugin-offline`,
