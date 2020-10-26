@@ -165,7 +165,7 @@ exports.onPostBuild = () => {
   // console.log(find(`${ path.join(__dirname, "docs", "post") }/**/*.html`));
 
   replace({
-    paths: filesMatched,
+    paths: globule.find([`./docs/post/**/*.html`, `./docs/*.js`, `./docs/*.map`]),
     regex: '/static',
     replacement: 'https://bu-mera.github.io/study/static',
     recursive: true,
@@ -173,7 +173,7 @@ exports.onPostBuild = () => {
   })
 
   replace({
-    paths: filesMatched,
+    paths: globule.find([`./docs/**/*.html`, `./docs/*.html`]),
     regex: 'href="',
     replacement: 'href="https://bu-mera.github.io/study',
     recursive: true,
