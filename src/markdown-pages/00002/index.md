@@ -2,7 +2,7 @@
 date: "2020-10-29"
 title: "第2回 React Native -View-"
 tags: ["React Native"]
-active: 1
+active: 0
 ---
 
 # React Native 勉強会 第2回 -View-

@@ -27,8 +27,8 @@ CSSと同様の仕組みが用意されているので`flex-direction`や`justif
 ### alignItems
 ここら辺は問題ないでしょう
 
-## StyleSheetの書き方
-説明説明説明説明説明とか
+## Styleの適用方法
+`StyleSheet.create`を使って定義します。
 
 ```jsx
 import { StyleSheet } from 'react-native'
@@ -36,38 +36,135 @@ import { StyleSheet } from 'react-native'
 const styles = StyleSheet.create({
   container: {
     flex: 1
+  },
+})
+```
+
+定義したstyleを下記のようにしてコンポーネントに割り当てます。
+```jsx
+<View style={styles.container}></View>
+```
+
+また、配列を用いることで、複数のstyleを合成して割り当てることもできます。  
+同一の項目がある場合は、配列の後ろの要素の方が優先されます。
+
+```jsx
+const styles = StyleSheet.create({
+  style1: {
+    marginTop: 20,
+    backgroundColor: 'red'
+  },
+  style2: {
+    marginBottom: 30,
+    backgroundColor: 'blue'
   }
 })
 ```
 
-説明説明説明説明説明とか
+```jsx
+<View style={[styles.style1, styles.style2]}></View>
+```
+上記の例の場合、下記のstyleが割り当てられます。
+```jsx
+{
+  marginTop: 20,
+  marginBottom: 30,
+  backgroundColor: 'blue'
+}
+```
 
 ## 実際にUIを構築していこう
+
+以下演習では各演習用のJSファイル（例えば`lesson1.js`）を作成してください。 
+
+各演習用のサンプルコード
+```jsx
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+
+const Lesson1 = () => {
+  return (
+    <View style={styles.body}>
+      <View style={styles.item}>
+        <Text>1</Text>
+      </View>
+      <View style={styles.item}>
+        <Text>2</Text>
+      </View>
+      <View style={styles.item}>
+        <Text>3</Text>
+      </View>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  body: {
+    flex: 1,
+  },
+  item: {
+    height: 30,
+    width: 30,
+    backgroundColor: '#bec6cc',
+  }
+});
+
+export default Lesson1;
+```
+
+作成したJSファイルを`App.js`にインポートして、反映してください。
+
+```jsx
+import Lesson1 from './lesson1';
+
+const App = () => {
+  return (
+    <Lesson1 />
+  );
+};
+```
+
 
 ### 演習1:横並びにするためにStyleSheetを作ってください。
 ```jsx:title=基本構造は以下とする
 <View>
-  <View>1</View>
-  <View>2</View>
-  <View>3</View>
+  <View>
+    <Text>1</Text>
+  </View>
+  <View>
+    <Text>2</Text>
+  </View>
+  <View>
+    <Text>3</Text>
+  </View>
 </View>
 ```
 
-### 演習2:
-### 演習3:
-### 演習4:
-### 演習5:
-### 演習6:
-### 演習7:
-### 演習8:下の画像のようなレイアウトを構築してください。
-### 演習9:下の画像のようなレイアウトを構築してください。
-### 演習10:下の画像のようなレイアウトを構築してください。
+### 演習2:逆順に表示するためにStyleSheetを作ってください。（JSXは演習1と同様）
 
-## 以下参考リンク
+### 演習3:等間隔で余白を開けて、縦並びするためにStyleSheetを作ってください。（JSXは演習1と同様）
 
-## 主要のコンポーネント・API
+### 演習4:画面中央に要素を配置するためにStyleSheetを作ってください。
+```jsx:title=基本構造は以下とする
+<View>
+  <View>
+    <Text>center</Text>
+  </View>
+</View>
+```
+### 演習6:下の画像のようなレイアウトを構築してください。上から高さが1:2:3となっています。（JSXは演習1と同様）
+![電卓アプリのレイアウト](./image00003-01.png)
+
+### 演習6:下の画像のようなレイアウトを構築してください。機能の実装はしなくて良いです。
+![電卓アプリのレイアウト](./image00003-02.jpg)
+
+---
+## 以下関連リンク
+
+<!-- ## 主要のコンポーネント・API -->
 
 ### StyleSheet
+[ドキュメント](https://reactnative.dev/docs/stylesheet)
 [Style定義](https://reactnative.dev/docs/style)
 
 ### View
@@ -77,7 +174,7 @@ const styles = StyleSheet.create({
 ### Text
 [ドキュメント](https://reactnative.dev/docs/text)
 
-
+<!-- 
 ### Image
 [ドキュメント](https://reactnative.dev/docs/image)  
 [画像データ周り](https://reactnative.dev/docs/images)
@@ -86,9 +183,9 @@ const styles = StyleSheet.create({
 [ドキュメント](https://reactnative.dev/docs/textinput)
 
 ### ScrollView
-[ドキュメント](https://reactnative.dev/docs/scrollview)
+[ドキュメント](https://reactnative.dev/docs/scrollview) -->
 
-
+<!-- 
 ## その他
 
 ### FlatList
@@ -105,4 +202,4 @@ const styles = StyleSheet.create({
 
 ### StatusBar
 画面上部のステータスバーの制御  
-[ドキュメント](https://reactnative.dev/docs/statusbar)
+[ドキュメント](https://reactnative.dev/docs/statusbar) -->
