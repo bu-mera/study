@@ -174,8 +174,8 @@ exports.onPostBuild = () => {
 
   replace({
     paths: globule.find([`./docs/**/*.html`, `./docs/*.html`]),
-    regex: 'href="',
-    replacement: 'href="https://bu-mera.github.io/study',
+    regex: 'href="/',
+    replacement: 'href="https://bu-mera.github.io/study/',
     recursive: true,
     silent: true,
   })
