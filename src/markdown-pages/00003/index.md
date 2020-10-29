@@ -126,7 +126,7 @@ const App = () => {
 
 
 ### 演習1:横並びにするためにStyleSheetを作ってください。
-```jsx:title=基本構造は以下とする
+```jsx
 <View>
   <View>
     <Text>1</Text>
@@ -145,7 +145,7 @@ const App = () => {
 ### 演習3:等間隔で余白を開けて、縦並びするためにStyleSheetを作ってください。（JSXは演習1と同様）
 
 ### 演習4:画面中央に要素を配置するためにStyleSheetを作ってください。
-```jsx:title=基本構造は以下とする
+```jsx
 <View>
   <View>
     <Text>center</Text>
