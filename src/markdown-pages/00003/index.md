@@ -30,7 +30,7 @@ CSSと同様の仕組みが用意されているので`flex-direction`や`justif
 ## Styleの適用方法
 `StyleSheet.create`を使って定義します。
 
-```jsx
+```js
 import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
@@ -41,14 +41,14 @@ const styles = StyleSheet.create({
 ```
 
 定義したstyleを下記のようにしてコンポーネントに割り当てます。
-```jsx
+```js
 <View style={styles.container}></View>
 ```
 
 また、配列を用いることで、複数のstyleを合成して割り当てることもできます。  
 同一の項目がある場合は、配列の後ろの要素の方が優先されます。
 
-```jsx
+```js
 const styles = StyleSheet.create({
   style1: {
     marginTop: 20,
@@ -61,11 +61,11 @@ const styles = StyleSheet.create({
 })
 ```
 
-```jsx
+```js
 <View style={[styles.style1, styles.style2]}></View>
 ```
 上記の例の場合、下記のstyleが割り当てられます。
-```jsx
+```js
 {
   marginTop: 20,
   marginBottom: 30,
@@ -75,10 +75,10 @@ const styles = StyleSheet.create({
 
 ## 実際にUIを構築していこう
 
-以下演習では各演習用のJSファイル（例えば`lesson1.js`）を作成してください。 
+以下演習では各演習用のJSファイル（例えば`lesson1.js`）を作成してください。
 
 各演習用のサンプルコード
-```jsx
+```js
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
@@ -114,7 +114,7 @@ export default Lesson1;
 
 作成したJSファイルを`App.js`にインポートして、反映してください。
 
-```jsx
+```js
 import Lesson1 from './lesson1';
 
 const App = () => {
@@ -126,7 +126,7 @@ const App = () => {
 
 
 ### 演習1:横並びにするためにStyleSheetを作ってください。
-```jsx:title=基本構造は以下とする
+```js:title=基本構造は以下とする
 <View>
   <View>
     <Text>1</Text>
@@ -145,15 +145,15 @@ const App = () => {
 ### 演習3:等間隔で余白を開けて、縦並びするためにStyleSheetを作ってください。（JSXは演習1と同様）
 
 ### 演習4:画面中央に要素を配置するためにStyleSheetを作ってください。
-```jsx:title=基本構造は以下とする
+```js:title=基本構造は以下とする
 <View>
   <View>
     <Text>center</Text>
   </View>
 </View>
 ```
-### 演習6:下の画像のようなレイアウトを構築してください。上から高さが1:2:3となっています。（JSXは演習1と同様）
-![演習5レイアウト](./image00003-01.png)
+### 演習5:下の画像のようなレイアウトを構築してください。上から高さが1:2:3となっています。（JSXは演習1と同様）
+![演習5レイアウト](./Image00003-01.png)
 
 ### 演習6:下の画像のようなレイアウトを構築してください。機能の実装はしなくて良いです。
 ![演習6のレイアウト](./image00003-02.jpg)
@@ -174,7 +174,7 @@ const App = () => {
 ### Text
 [ドキュメント](https://reactnative.dev/docs/text)
 
-<!-- 
+<!--
 ### Image
 [ドキュメント](https://reactnative.dev/docs/image)  
 [画像データ周り](https://reactnative.dev/docs/images)
@@ -185,7 +185,7 @@ const App = () => {
 ### ScrollView
 [ドキュメント](https://reactnative.dev/docs/scrollview) -->
 
-<!-- 
+<!--
 ## その他
 
 ### FlatList
