@@ -49,8 +49,8 @@ $lineSpacing: 2rem;
 
     &__title {
       font-weight: bold;
-      font-size: 4rem;
-      margin: 0;
+      font-size: 3rem;
+      margin: 16px 0;
       line-height: 1.4;
       display: flex;
       align-items: flex-end;
@@ -72,13 +72,21 @@ $lineSpacing: 2rem;
       h1, h2, h3, h4, h5, h6, p, ul, ol, li, table, thead, tbody, tr, th, td, blockquote {
         font-weight: normal;
         font-size: 14px;
-        // margin: 0 0 2rem;
-        margin: 0;
+        // margin: 0;
         line-height: $lineSpacing;
       }
 
       p, ul, ol, table, blockquote {
         // margin-left: 14px;
+        padding: 0 1rem;
+      }
+
+      p {
+        > code {
+          p & {
+            padding: 0!important;
+          }
+        }
       }
 
       hr {
@@ -186,7 +194,18 @@ $lineSpacing: 2rem;
         margin-bottom: 2.0rem;
       }
 
-      h3, h4, h5, h6 {
+      h3 {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-left: 10px;
+        // margin-bottom: 8px;
+        word-break: break-all;
+        margin-top: 1.4em;
+        display: list-item;
+        margin-left: 24px;
+      }
+
+      h4, h5, h6 {
         font-size: 16px;
         position: relative;
         margin-left: 24px;
@@ -215,8 +234,9 @@ $lineSpacing: 2rem;
         border-radius: 0.3em;
         overflow: auto;
         // margin-left: 10px;
-        margin-bottom: 16px;
-        margin-top: 16px;
+        // margin-bottom: 16px;
+        // margin-top: 16px;
+        margin: 16px 1rem;
 
         pre[class*="language-"] {
           margin: 0;
@@ -239,7 +259,8 @@ $lineSpacing: 2rem;
       .gatsby-code-title {
         background-color: #2d2d2d;
         color: #999;
-        margin-bottom: -0.9em;
+        margin-bottom: -1.8em;
+        margin-left: 1.4em;
         padding: 0.7rem 1.05rem;
         font-size: 0.8em;
         line-height: 0.2;
