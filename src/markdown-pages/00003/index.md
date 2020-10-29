@@ -153,10 +153,10 @@ const App = () => {
 </View>
 ```
 ### 演習6:下の画像のようなレイアウトを構築してください。上から高さが1:2:3となっています。（JSXは演習1と同様）
-![電卓アプリのレイアウト](./image00003-01.png)
+![演習5レイアウト](./image00003-01.png)
 
 ### 演習6:下の画像のようなレイアウトを構築してください。機能の実装はしなくて良いです。
-![電卓アプリのレイアウト](./image00003-02.jpg)
+![演習6のレイアウト](./image00003-02.jpg)
 
 ---
 ## 以下関連リンク
@@ -164,7 +164,7 @@ const App = () => {
 <!-- ## 主要のコンポーネント・API -->
 
 ### StyleSheet
-[ドキュメント](https://reactnative.dev/docs/stylesheet)
+[ドキュメント](https://reactnative.dev/docs/stylesheet)  
 [Style定義](https://reactnative.dev/docs/style)
 
 ### View
