@@ -65,8 +65,15 @@ apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.grad
 ```
 
 ## 環境毎に切り替え
+### iOS
+
 ```
 $ ENVFILE=.env.dev npx react-native run-ios
+```
+
+### Android
+
+```
 $ ENVFILE=.env.dev npx react-native run-android
 ```
 

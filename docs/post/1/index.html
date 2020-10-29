@@ -33,8 +33,10 @@ pod install</code></pre></div>
 <div class="gatsby-code-title">android/app/build.gradle</div>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">apply <span class="token keyword">from</span><span class="token operator">:</span> <span class="token function">project</span><span class="token punctuation">(</span><span class="token string">':react-native-config'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>projectDir<span class="token punctuation">.</span><span class="token function">getPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"/dotenv.gradle"</span></code></pre></div>
 <h2>環境毎に切り替え</h2>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">$ ENVFILE=.env.dev npx react-native run-ios
-$ ENVFILE=.env.dev npx react-native run-android</code></pre></div>
+<h3>iOS</h3>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">$ ENVFILE=.env.dev npx react-native run-ios</code></pre></div>
+<h3>Android</h3>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">$ ENVFILE=.env.dev npx react-native run-android</code></pre></div>
 <p>build.gradleに以下を追記</p>
 <div class="gatsby-code-title">android/app/build.gradle</div>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">project<span class="token punctuation">.</span>ext<span class="token punctuation">.</span>envConfigFiles <span class="token operator">=</span> <span class="token punctuation">[</span>
