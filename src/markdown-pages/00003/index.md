@@ -1,6 +1,6 @@
 ---
 date: "2020-10-29"
-title: "第2回 React Native -デザイン-"
+title: "第2回 React Native -FlexboxとStyleSheet-"
 tags: ["React Native"]
 active: 1
 ---

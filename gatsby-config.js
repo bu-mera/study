@@ -39,18 +39,25 @@ module.exports = {
               noInlineHighlight: false,
             }
           },
-          // 画像
           {
-            resolve: `gatsby-remark-images`,
+            resolve: 'gatsby-remark-copy-linked-files',
             options: {
-              maxWidth: 600,
-              tracedSVG: true
-              // wrapperStyle: `width: auto;`
-              // linkImagesToOriginal: false
-              // backgroundColor: `none`,
-              // loading: `eager`,
+              ignoreFileExtensions: [],
             }
           },
+
+          // 画像
+          // {
+          //   resolve: `gatsby-remark-images`,
+          //   options: {
+          //     maxWidth: 600,
+          //     tracedSVG: true
+          //     // wrapperStyle: `width: auto;`
+          //     // linkImagesToOriginal: false
+          //     // backgroundColor: `none`,
+          //     // loading: `eager`,
+          //   }
+          // },
           // {
           //   resolve: `gatsby-plugin-canonical-urls`,
           //   options: {
