@@ -102,7 +102,7 @@ Xcodeで`Info.plist`から手動で追加することもできる。
 +ボタンから`Fonts provided by application`でkeyを追加。  
 追加したいフォント名を追加する。
 
-![sample1](./001.png)
+<img src="./001.png" width="500" alt="Xcodeで手動で追加">
 
 ### Android
 
@@ -114,4 +114,4 @@ apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 
 ## 演習
 ### Slackのプロフィールを模倣する
-![sample2](./002.gif)
+<img src="./002.gif" width="250" alt="Slackのプロフィールを模倣する">
