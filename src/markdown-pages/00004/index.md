@@ -10,7 +10,7 @@ active: 1
 import { Image } from 'react-native'
 ```
 
-`Image`を使います。
+`Image`コンポーネントを使います。
 
 ## サーバにある画像は絶対パスで指定する
 ```js
@@ -32,7 +32,6 @@ import { Image } from 'react-native'
 #### エラーサンプル
 ```js
 const imagePath = './assets/xxx.png'
-
 <Image
   source={ require(imagePath) }
 />
@@ -59,10 +58,11 @@ const imageName = 'xxx'
 #### stretch
 - 縦横比は維持しない -->
 
-
 # アイコンを表示しよう
 
 ## react-native-vector-icons
+[github](https://github.com/oblador/react-native-vector-icons)
+
 ```
 $ yarn add react-native-vector-icons
 ```
@@ -76,7 +76,7 @@ $ pod install
 
 `ios/[ PROJECT_NAME ]/Info.plist`に以下を追記する。
 
-```
+```js
 <key>UIAppFonts</key>
 <array>
   <string>AntDesign.ttf</string>
@@ -98,8 +98,8 @@ $ pod install
 </array>
 ```
 
-Xcodeで`Info.plist`から手動で追加することもできる。
-+ボタンから`Fonts provided by application`でkeyを追加。
+Xcodeで`Info.plist`から手動で追加することもできる。  
++ボタンから`Fonts provided by application`でkeyを追加。  
 追加したいフォント名を追加する。
 
 ![sample1](./001.png)
