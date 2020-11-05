@@ -160,6 +160,69 @@ const App = () => {
 
 <img src="./image00003-02.jpg" width="150" alt="演習6のレイアウト">
 
+## 追加
+
+### Text
+```js
+import { Text } from 'react-native'
+```
+テキストの表示に使用します。
+
+```js
+<Text>
+  text
+</Text>
+```
+
+ネストさせて、一部のテキストのみへのstyleの適用や上書きすることも可能です。
+
+```js
+<Text style={{ fontWeight: 'bold', color: 'blue' }}>
+  text
+  <Text style={{ color: 'red' }}>
+    nestedText
+  </Text>
+</Text>
+```
+
+
+### ScrollView
+```js
+import { ScrollView } from 'react-native'
+```
+
+コンポーネントをScrollViewでラップすることで、スクロールできるようになります。
+
+```js
+<ScrollView>
+  <Text>
+    長文
+  </Text>
+</ScrollView>
+```
+
+
+
+## 追加演習
+
+以下演習ではダンダダン案件で使用されたUIの実装をしていただきます。  
+サムネイル画像・アイコンは実装せず、`View`で背景色もしくはボーダーを設定してください。 
+
+### 追加演習4:下の画像のようなレイアウトを作成してください。
+
+<img src="./image00003-03.png" width="250" alt="追加演習1のレイアウト">
+
+### 追加演習4:下の画像のようなレイアウトを作成してください。
+
+<img src="./image00003-04.png" width="250" alt="追加演習2のレイアウト">
+
+### 追加演習4:下の画像のようなレイアウトを作成してください。
+
+<img src="./image00003-05.png" width="250" alt="追加演習3のレイアウト">
+
+### 追加演習4:下の画像のようなレイアウトを作成してください。加えて、スクロールできるようにしてください。
+
+<img src="./image00003-06.png" width="250" alt="追加演習4のレイアウト">
 
 ## 以下関連リンク
 
@@ -176,16 +239,16 @@ const App = () => {
 ### Text
 [ドキュメント](https://reactnative.dev/docs/text)
 
+### ScrollView
+[ドキュメント](https://reactnative.dev/docs/scrollview)
+
 <!--
 ### Image
 [ドキュメント](https://reactnative.dev/docs/image)  
 [画像データ周り](https://reactnative.dev/docs/images)
 
 ### TextInput
-[ドキュメント](https://reactnative.dev/docs/textinput)
-
-### ScrollView
-[ドキュメント](https://reactnative.dev/docs/scrollview) -->
+[ドキュメント](https://reactnative.dev/docs/textinput) -->
 
 <!--
 ## その他

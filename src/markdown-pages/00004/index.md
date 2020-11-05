@@ -76,7 +76,7 @@ $ pod install
 
 `ios/[ PROJECT_NAME ]/Info.plist`に以下を追記する。
 
-```js
+```
 <key>UIAppFonts</key>
 <array>
   <string>AntDesign.ttf</string>
