@@ -20,19 +20,26 @@
 <span class="token operator">&lt;</span>Image
   source<span class="token operator">=</span><span class="token punctuation">{</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">./assets/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span> imageName <span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.png</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
 <span class="token operator">/</span><span class="token operator">></span></code></pre></div>
-<!-- ## 画像の縦横比率の変更
-### resizeModeプロパティを指定する
-
-#### cover
-- 縦横比は維持する
--
-
-#### contain
-- 縦横比は維持する
-
-
-#### stretch
-- 縦横比は維持しない -->
+<h2>画像の縦横比率の変更</h2>
+<h3>resizeModeプロパティを指定する</h3>
+<h4>cover</h4>
+<ul>
+<li>縦横比は維持する</li>
+<li>width、heightの大きい数値に合わせて画像をリサイズする</li>
+</ul>
+<h4>contain</h4>
+<ul>
+<li>縦横比は維持する</li>
+<li>width、heightの小さい数値に合わせて画像をリサイズする</li>
+</ul>
+<h4>stretch</h4>
+<ul>
+<li>縦横比は維持しない</li>
+<li>width、heightの数値に合わせて画像をリサイズする</li>
+</ul>
+<h3>デモ</h3>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> width<span class="token operator">:</span> <span class="token number">300</span><span class="token punctuation">,</span> height<span class="token operator">:</span> <span class="token number">200</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre></div>
+<img src="https://bu-mera.github.io/study/static/d856743fc8e1051cc8690c0244fe859c/003.png" width="300" alt="">
 <h1>アイコンを表示しよう</h1>
 <h2>react-native-vector-icons</h2>
 <p><a href="https://github.com/oblador/react-native-vector-icons" target="_blank" rel="noopener noreferrer">github</a></p>

@@ -44,19 +44,27 @@ const imageName = 'xxx'
 />
 ```
 
-<!-- ## 画像の縦横比率の変更
+## 画像の縦横比率の変更
 ### resizeModeプロパティを指定する
 
 #### cover
 - 縦横比は維持する
--
+- width、heightの大きい数値に合わせて画像をリサイズする
 
 #### contain
 - 縦横比は維持する
-
+- width、heightの小さい数値に合わせて画像をリサイズする
 
 #### stretch
-- 縦横比は維持しない -->
+- 縦横比は維持しない
+- width、heightの数値に合わせて画像をリサイズする
+
+### デモ
+```js
+style={{ width: 300, height: 200 }}
+```
+
+<img src="./003.png" width="300" alt="">
 
 # アイコンを表示しよう
 
