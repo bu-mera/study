@@ -168,12 +168,14 @@ return (
 # 画面遷移（基礎編）
 
 画面遷移には`react-navigation`を使用します。
-<!-- 
+
 ## ナビゲーションの種類
 
-### スタックナビゲーター
+### スタックナビゲーション
+元の画面の上に新しい画面が積み重なり、「戻る」という動作で新しい画面が取り除かれて元の画面に戻る形式
 
-### タブナビゲーター -->
+### タブナビゲーション
+タブを使って画面を切り替える形式
 
 ## 導入
 ```
@@ -209,7 +211,7 @@ const App = () => {
 }
 ```
 
-## スタックナビゲーターの実装
+## スタックナビゲーションの実装
 
 例として、`HomeScreen`と`DetailsScreen`を作成し、`HomeScreen`から`DetailsScreen`へ遷移できるようにします。
 
@@ -254,6 +256,11 @@ const App = () => {
 }
 ```
 
-
+### iOS  
 <img src="./003.png" width="250" alt="HomeScreen">
 <img src="./004.png" width="250" alt="DetailsScreen">
+
+
+### Android  
+<img src="./005.png" width="250" alt="HomeScreen">
+<img src="./006.png" width="250" alt="DetailsScreen">
