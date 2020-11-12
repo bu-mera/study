@@ -120,6 +120,9 @@ Xcodeで`Info.plist`から手動で追加することもできる。
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 ```
 
+[アイコン一覧](https://oblador.github.io/react-native-vector-icons/)
+
+
 ## 演習
 ### Slackのプロフィールを模倣する
 <img src="./002.gif" width="250" alt="Slackのプロフィールを模倣する">
