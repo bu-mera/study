@@ -57,6 +57,8 @@ const App = () => {
 
 ## スタックナビゲーションの実装
 
+[createStackNavigator](https://reactnavigation.org/docs/stack-navigator)
+
 例として、`HomeScreen`と`DetailsScreen`を作成し、`HomeScreen`から`DetailsScreen`へ遷移できるようにします。
 
 App.js
@@ -117,6 +119,9 @@ navigation.navigate('Screen Name')
 
 
 ## タブナビゲーションの実装
+
+[createBottomTabNavigator](https://reactnavigation.org/docs/bottom-tab-navigator)
+
 例として、`HomeScreen`と`SettingScreen`を作成し、それぞれタブで遷移できるようにします。
 
 ```js
@@ -180,11 +185,81 @@ const App = () => {
 * gestureResponseDistance
 ...
 
-### Tabのオプション例
-* tabBarLabel
-* tabBarIcon
-* tabBarButton
-...
+### Stackの実装例
+```js
+  <Stack.Screen
+    name="Home"
+    component={Home}
+    options={{
+      headerTitle: 'ホーム',
+      headerLeft: () => <HeaderButton onPress={ () => {} } />,
+      headerRight: () => <HeaderButton onPress={ () => {} } />,
+    }}
+  />
+```
+
+[createStackNavigatorのProps](https://reactnavigation.org/docs/stack-navigator#props)
+
+### Tabの実装例
+```js
+  <Tab.Screen
+    name="MyPage"
+    component={MyPage}
+    options={{
+      tabBarLabel: 'マイページ',
+      tabBarIcon: ({ color, size }) => (
+        // アイコンコンポーネント
+        <Icon name="account" color={color} size={size} />
+      ),
+    }}
+  />
+```
+
+[createBottomTabNavigatorのProps](https://reactnavigation.org/docs/bottom-tab-navigator#props)
+
+
+
+### パラメーターの受け渡し
+
+```js
+const HomeScreen = ({ navigation }) => {
+  return (
+    <SafeAreaView style={{ flex: 1 }}>
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <Text>Home</Text>
+        <Button
+          title="Go to Details"
+        onPress={ () => navigation.navigate("Details", { count: 0 }) }
+        />
+      </View>
+    </SafeAreaView>
+  )
+}
+
+const DetailsScreen = ({ route, navigation }) => {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Details</Text>
+      <Text>{`count: ${ route.params.count }`}</Text>
+      <Button
+          title="count up"
+        onPress={ () => navigation.setParams({ count: route.params.count + 1 }) }
+        />
+    </View>
+  )
+}
+
+const App = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Details" component={DetailsScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+```
 
 ## ナビゲーションのネスト
 
@@ -268,7 +343,7 @@ const App = () => {
 
 
 
-### 認証したい
+### 起動後に認証画面を表示したい
 
 <img src="./008.gif" width="250">
 
@@ -291,3 +366,5 @@ const App = () => {
 };
 
 ```
+
+## 演習: Slackアプリの模倣

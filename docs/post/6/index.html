@@ -29,6 +29,7 @@ pod install</code></pre></div>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre></div>
 <h2>スタックナビゲーションの実装</h2>
+<p><a href="https://reactnavigation.org/docs/stack-navigator" target="_blank" rel="noopener noreferrer">createStackNavigator</a></p>
 <p>例として、<code class="language-text">HomeScreen</code>と<code class="language-text">DetailsScreen</code>を作成し、<code class="language-text">HomeScreen</code>から<code class="language-text">DetailsScreen</code>へ遷移できるようにします。</p>
 <p>App.js</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token string">'react-native-gesture-handler'</span><span class="token punctuation">;</span>
@@ -79,6 +80,7 @@ pod install</code></pre></div>
 <!-- <img src="./003.png" width="250" alt="HomeScreen">
 <img src="./004.png" width="250" alt="DetailsScreen"> -->
 <h2>タブナビゲーションの実装</h2>
+<p><a href="https://reactnavigation.org/docs/bottom-tab-navigator" target="_blank" rel="noopener noreferrer">createBottomTabNavigator</a></p>
 <p>例として、<code class="language-text">HomeScreen</code>と<code class="language-text">SettingScreen</code>を作成し、それぞれタブで遷移できるようにします。</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token string">'react-native-gesture-handler'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
@@ -134,13 +136,68 @@ pod install</code></pre></div>
 <li>gestureResponseDistance
 ...</li>
 </ul>
-<h3>Tabのオプション例</h3>
-<ul>
-<li>tabBarLabel</li>
-<li>tabBarIcon</li>
-<li>tabBarButton
-...</li>
-</ul>
+<h3>Stackの実装例</h3>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">  <span class="token operator">&lt;</span>Stack<span class="token punctuation">.</span>Screen
+    name<span class="token operator">=</span><span class="token string">"Home"</span>
+    component<span class="token operator">=</span><span class="token punctuation">{</span>Home<span class="token punctuation">}</span>
+    options<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+      headerTitle<span class="token operator">:</span> <span class="token string">'ホーム'</span><span class="token punctuation">,</span>
+      <span class="token function-variable function">headerLeft</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token operator">&lt;</span>HeaderButton onPress<span class="token operator">=</span><span class="token punctuation">{</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">,</span>
+      <span class="token function-variable function">headerRight</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token operator">&lt;</span>HeaderButton onPress<span class="token operator">=</span><span class="token punctuation">{</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">}</span>
+  <span class="token operator">/</span><span class="token operator">></span></code></pre></div>
+<p><a href="https://reactnavigation.org/docs/stack-navigator#props" target="_blank" rel="noopener noreferrer">createStackNavigatorのProps</a></p>
+<h3>Tabの実装例</h3>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">  <span class="token operator">&lt;</span>Tab<span class="token punctuation">.</span>Screen
+    name<span class="token operator">=</span><span class="token string">"MyPage"</span>
+    component<span class="token operator">=</span><span class="token punctuation">{</span>MyPage<span class="token punctuation">}</span>
+    options<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+      tabBarLabel<span class="token operator">:</span> <span class="token string">'マイページ'</span><span class="token punctuation">,</span>
+      <span class="token function-variable function">tabBarIcon</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> color<span class="token punctuation">,</span> size <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
+        <span class="token comment">// アイコンコンポーネント</span>
+        <span class="token operator">&lt;</span>Icon name<span class="token operator">=</span><span class="token string">"account"</span> color<span class="token operator">=</span><span class="token punctuation">{</span>color<span class="token punctuation">}</span> size<span class="token operator">=</span><span class="token punctuation">{</span>size<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">}</span>
+  <span class="token operator">/</span><span class="token operator">></span></code></pre></div>
+<p><a href="https://reactnavigation.org/docs/bottom-tab-navigator#props" target="_blank" rel="noopener noreferrer">createBottomTabNavigatorのProps</a></p>
+<h3>パラメーターの受け渡し</h3>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token function-variable function">HomeScreen</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> navigation <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>SafeAreaView style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> flex<span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> flex<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> justifyContent<span class="token operator">:</span> <span class="token string">'center'</span><span class="token punctuation">,</span> alignItems<span class="token operator">:</span> <span class="token string">'center'</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>Text<span class="token operator">></span>Home<span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+        <span class="token operator">&lt;</span>Button
+          title<span class="token operator">=</span><span class="token string">"Go to Details"</span>
+        onPress<span class="token operator">=</span><span class="token punctuation">{</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> navigation<span class="token punctuation">.</span><span class="token function">navigate</span><span class="token punctuation">(</span><span class="token string">"Details"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> count<span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
+        <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>SafeAreaView<span class="token operator">></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">DetailsScreen</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> route<span class="token punctuation">,</span> navigation <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> flex<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> justifyContent<span class="token operator">:</span> <span class="token string">'center'</span><span class="token punctuation">,</span> alignItems<span class="token operator">:</span> <span class="token string">'center'</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>Text<span class="token operator">></span>Details<span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+      <span class="token operator">&lt;</span>Text<span class="token operator">></span><span class="token punctuation">{</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">count: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span> route<span class="token punctuation">.</span>params<span class="token punctuation">.</span>count <span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">></span>
+      <span class="token operator">&lt;</span>Button
+          title<span class="token operator">=</span><span class="token string">"count up"</span>
+        onPress<span class="token operator">=</span><span class="token punctuation">{</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> navigation<span class="token punctuation">.</span><span class="token function">setParams</span><span class="token punctuation">(</span><span class="token punctuation">{</span> count<span class="token operator">:</span> route<span class="token punctuation">.</span>params<span class="token punctuation">.</span>count <span class="token operator">+</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
+        <span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>View<span class="token operator">></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>NavigationContainer<span class="token operator">></span>
+      <span class="token operator">&lt;</span>Stack<span class="token punctuation">.</span>Navigator initialRouteName<span class="token operator">=</span><span class="token string">"Home"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>Stack<span class="token punctuation">.</span>Screen name<span class="token operator">=</span><span class="token string">"Home"</span> component<span class="token operator">=</span><span class="token punctuation">{</span>HomeScreen<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>Stack<span class="token punctuation">.</span>Screen name<span class="token operator">=</span><span class="token string">"Details"</span> component<span class="token operator">=</span><span class="token punctuation">{</span>DetailsScreen<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>Stack<span class="token punctuation">.</span>Navigator<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>NavigationContainer<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
 <h2>ナビゲーションのネスト</h2>
 <p><code class="language-text">MyPage</code>、<code class="language-text">Setting</code>タブを作成し、それぞれでスタックできるようにします。<br>
 まず、<code class="language-text">MyPage</code>タブ用のスタックナビゲーターを作成します。</p>
@@ -201,7 +258,7 @@ pod install</code></pre></div>
     <span class="token operator">&lt;</span><span class="token operator">/</span>NavigationContainer<span class="token operator">></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
-<h3>認証したい</h3>
+<h3>起動後に認証画面を表示したい</h3>
 <img src="https://bu-mera.github.io/study/static/776451652b18a72e54dca4421fc9d258/008.gif" width="250">
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// isSigned: 認証したかどうか</span>
 <span class="token comment">// SignInScreen: 未認証時に表示するスクリーン</span>
@@ -218,4 +275,5 @@ pod install</code></pre></div>
       <span class="token operator">&lt;</span><span class="token operator">/</span>Stack<span class="token punctuation">.</span>Navigator<span class="token operator">></span>
     <span class="token operator">&lt;</span><span class="token operator">/</span>NavigationContainer<span class="token operator">></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div></div></div></div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/post/6";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-5f386974764ce82315df.js"],"app":["/app-5e3663c7f251f21f87e0.js"],"component---src-pages-404-js":["/component---src-pages-404-js-1ba2ef53130c5bf2ec60.js"],"component---src-pages-index-js":["/component---src-pages-index-js-54b1e38fde96f390bdf1.js"],"component---src-pages-search-js":["/component---src-pages-search-js-1d681901fb2a5e89ab3a.js"],"component---src-templates-post-js":["/component---src-templates-post-js-9bd293ae6dd0b07b0d2f.js"],"component---src-templates-tags-js":["/component---src-templates-tags-js-09001da28e4958ce048d.js"]};/*]]>*/</script><script src="/polyfill-5f386974764ce82315df.js" nomodule=""></script><script src="/webpack-runtime-04bcfb5b394a0a0b0b39.js" async=""></script><script src="/framework-741ade27086b2708e961.js" async=""></script><script src="/styles-e9d24b1846c7d6eb9685.js" async=""></script><script src="/commons-c9a3a1eba128f3c6be6f.js" async=""></script><script src="/component---src-templates-post-js-9bd293ae6dd0b07b0d2f.js" async=""></script><script src="/app-5e3663c7f251f21f87e0.js" async=""></script></body></html>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
+<h2>演習: Slackアプリの模倣</h2></div></div></div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/post/6";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-5f386974764ce82315df.js"],"app":["/app-5e3663c7f251f21f87e0.js"],"component---src-pages-404-js":["/component---src-pages-404-js-1ba2ef53130c5bf2ec60.js"],"component---src-pages-index-js":["/component---src-pages-index-js-54b1e38fde96f390bdf1.js"],"component---src-pages-search-js":["/component---src-pages-search-js-1d681901fb2a5e89ab3a.js"],"component---src-templates-post-js":["/component---src-templates-post-js-9bd293ae6dd0b07b0d2f.js"],"component---src-templates-tags-js":["/component---src-templates-tags-js-09001da28e4958ce048d.js"]};/*]]>*/</script><script src="/polyfill-5f386974764ce82315df.js" nomodule=""></script><script src="/webpack-runtime-04bcfb5b394a0a0b0b39.js" async=""></script><script src="/framework-741ade27086b2708e961.js" async=""></script><script src="/styles-e9d24b1846c7d6eb9685.js" async=""></script><script src="/commons-c9a3a1eba128f3c6be6f.js" async=""></script><script src="/component---src-templates-post-js-9bd293ae6dd0b07b0d2f.js" async=""></script><script src="/app-5e3663c7f251f21f87e0.js" async=""></script></body></html>
