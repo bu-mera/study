@@ -74,8 +74,8 @@ pod install</code></pre></div>
 <h3>iOSとAndroidでの挙動</h3>
 <!-- <img src="./001.png" width="250" alt="HomeScreen"> -->
 <!-- <img src="./002.png" width="250" alt="DetailsScreen"> -->
-<img src="https://bu-mera.github.io/study/static/5206c64edde9d6418cb0f3b822ea8596/001.gif" width="250">
-<img src="https://bu-mera.github.io/study/static/8cc62f6911d35a4c8a3e46a960d2ac2b/002.gif" width="250">
+<img src="https://bu-mera.github.io/study/static/68bf08e9cf54edac9e26d57291eda9ae/002.gif" width="250">
+<img src="https://bu-mera.github.io/study/static/6bb9d2251f16e7a4674452dd7ca8097d/009.gif" width="250">
 <!-- <img src="./003.png" width="250" alt="HomeScreen">
 <img src="./004.png" width="250" alt="DetailsScreen"> -->
 <h2>タブナビゲーションの実装</h2>
@@ -109,15 +109,38 @@ pod install</code></pre></div>
     <span class="token operator">&lt;</span>NavigationContainer<span class="token operator">></span>
       <span class="token operator">&lt;</span>Tab<span class="token punctuation">.</span>Navigator<span class="token operator">></span>
         <span class="token operator">&lt;</span>Tab<span class="token punctuation">.</span>Screen name<span class="token operator">=</span><span class="token string">"Home"</span> component<span class="token operator">=</span><span class="token punctuation">{</span>HomeScreen<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
-        <span class="token operator">&lt;</span>Tab<span class="token punctuation">.</span>Screen name<span class="token operator">=</span><span class="token string">"Details"</span> component<span class="token operator">=</span><span class="token punctuation">{</span>SettingScreen<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>Tab<span class="token punctuation">.</span>Screen name<span class="token operator">=</span><span class="token string">"Setting"</span> component<span class="token operator">=</span><span class="token punctuation">{</span>SettingScreen<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
       <span class="token operator">&lt;</span><span class="token operator">/</span>Tab<span class="token punctuation">.</span>Navigator<span class="token operator">></span>
     <span class="token operator">&lt;</span><span class="token operator">/</span>NavigationContainer<span class="token operator">></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
 <h3>iOSとAndroidでの挙動</h3>
-<img src="https://bu-mera.github.io/study/static/f24b520d880adc7222bfbfdc7bdd0895/003.gif" width="250">
-<img src="https://bu-mera.github.io/study/static/1dab42891a713b27759f172e3a9a5013/004.gif" width="250">
+<img src="https://bu-mera.github.io/study/static/1be4bed51b3ba4dd3d593d269f605d28/003.gif" width="250">
+<img src="https://bu-mera.github.io/study/static/ad1f91179686c3b27097375fe53714dc/004.gif" width="250">
 <!-- ### Android   -->
+<h2>詳細の実装</h2>
+<p><code class="language-text">Stack</code>・<code class="language-text">BottomTab</code>共にオプションを指定することができ、ラベルやアイコン、遷移アニメーションなどの詳細設定ができます。</p>
+<h3>Stackのオプション例</h3>
+<ul>
+<li>headerTitle</li>
+<li>headerLeft</li>
+<li>headerRight</li>
+<li>header</li>
+<li>headerShown</li>
+<li>animationEnabled</li>
+<li>cardStyleInterpolator</li>
+<li>gestureEnabled</li>
+<li>gestureDirection</li>
+<li>gestureResponseDistance
+...</li>
+</ul>
+<h3>Tabのオプション例</h3>
+<ul>
+<li>tabBarLabel</li>
+<li>tabBarIcon</li>
+<li>tabBarButton
+...</li>
+</ul>
 <h2>ナビゲーションのネスト</h2>
 <p><code class="language-text">MyPage</code>、<code class="language-text">Setting</code>タブを作成し、それぞれでスタックできるようにします。<br>
 まず、<code class="language-text">MyPage</code>タブ用のスタックナビゲーターを作成します。</p>
@@ -144,29 +167,6 @@ pod install</code></pre></div>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
 <img src="https://bu-mera.github.io/study/static/b8400f9674689c12900b8d652130acee/005.gif" width="250">
-<h2>詳細の実装</h2>
-<p><code class="language-text">Stack</code>・<code class="language-text">BottomTab</code>共にオプションを指定することができ、ラベルやアイコン、遷移アニメーションなどの詳細設定ができます。</p>
-<h3>Stackのオプション例</h3>
-<ul>
-<li>headerTitle</li>
-<li>headerLeft</li>
-<li>headerRight</li>
-<li>header</li>
-<li>headerShown</li>
-<li>animationEnabled</li>
-<li>cardStyleInterpolator</li>
-<li>gestureEnabled</li>
-<li>gestureDirection</li>
-<li>gestureResponseDistance
-...</li>
-</ul>
-<h3>Tabのオプション例</h3>
-<ul>
-<li>tabBarLabel</li>
-<li>tabBarIcon</li>
-<li>tabBarButton
-...</li>
-</ul>
 <h2>パターン別の設計例</h2>
 <h3>タブの上にスクリーンを表示させたい</h3>
 <img src="https://bu-mera.github.io/study/static/7b71e2f27e8c4c1c0180fcaa87f8a249/006.gif" width="250">

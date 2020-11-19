@@ -109,8 +109,8 @@ navigation.navigate('Screen Name')
 ### iOSとAndroidでの挙動  
 <!-- <img src="./001.png" width="250" alt="HomeScreen"> -->
 <!-- <img src="./002.png" width="250" alt="DetailsScreen"> -->
-<img src="./001.gif" width="250">
 <img src="./002.gif" width="250">
+<img src="./009.gif" width="250">
 
 <!-- <img src="./003.png" width="250" alt="HomeScreen">
 <img src="./004.png" width="250" alt="DetailsScreen"> -->
@@ -149,7 +149,7 @@ const App = () => {
     <NavigationContainer>
       <Tab.Navigator>
         <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Details" component={SettingScreen} />
+        <Tab.Screen name="Setting" component={SettingScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
@@ -162,6 +162,29 @@ const App = () => {
 <img src="./004.gif" width="250">
 
 <!-- ### Android   -->
+
+## 詳細の実装
+
+`Stack`・`BottomTab`共にオプションを指定することができ、ラベルやアイコン、遷移アニメーションなどの詳細設定ができます。
+
+### Stackのオプション例
+* headerTitle
+* headerLeft
+* headerRight
+* header
+* headerShown
+* animationEnabled
+* cardStyleInterpolator
+* gestureEnabled
+* gestureDirection
+* gestureResponseDistance
+...
+
+### Tabのオプション例
+* tabBarLabel
+* tabBarIcon
+* tabBarButton
+...
 
 ## ナビゲーションのネスト
 
@@ -198,29 +221,6 @@ const App = () => {
 
 
 <img src="./005.gif" width="250">
-
-## 詳細の実装
-
-`Stack`・`BottomTab`共にオプションを指定することができ、ラベルやアイコン、遷移アニメーションなどの詳細設定ができます。
-
-### Stackのオプション例
-* headerTitle
-* headerLeft
-* headerRight
-* header
-* headerShown
-* animationEnabled
-* cardStyleInterpolator
-* gestureEnabled
-* gestureDirection
-* gestureResponseDistance
-...
-
-### Tabのオプション例
-* tabBarLabel
-* tabBarIcon
-* tabBarButton
-...
 
 ## パターン別の設計例
 
