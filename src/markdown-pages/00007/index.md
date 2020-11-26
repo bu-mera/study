@@ -32,7 +32,7 @@ public class MainActivity extends ReactActivity {
 
 #### android/app/src/main/res/layout/launch_screen.xml
 
-```xml
+```
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
@@ -44,7 +44,7 @@ public class MainActivity extends ReactActivity {
 
 スプラッシュスクリーン描画用xmlファイル
 drawable/splash_screen.xml
-```xml
+```
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     
@@ -56,7 +56,7 @@ drawable/splash_screen.xml
 
 背景色の定義
 color.xml
-```xml
+```
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   ...
@@ -73,7 +73,7 @@ color.xml
 
 スプラッシュスクリーンアクティビティのテーマの定義
 values/styles.xml
-```xml
+```
 ...
     <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:background">@drawable/splash_screen</item>
@@ -102,7 +102,7 @@ public class SplashActivity extends AppCompatActivity {
 ```
 AndroidManifest.xml
 
-```xml
+```
 ...
     <application>
         <activity
@@ -145,7 +145,7 @@ public class MainActivity extends ReactActivity {
 
 #### android/app/src/main/res/layout/launch_screen.xml
 
-```xml
+```
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
@@ -194,7 +194,7 @@ npx pod-install ios
 スプラッシュ画面のファイルは `ios/[プロジェクト名]/LaunchScreen.storyboard` です。
 デフォルトでは文字が表示されているので、不要部分を削除し、背景色を変更します。
 
-```xml
+```
 ...
 <!--View Controller-->
 <scene sceneID="EHf-IW-A2E">
@@ -216,7 +216,7 @@ npx pod-install ios
 ```
 
 
-次に、画面の制御をしていきます。  
+次に、スプラッシュ画面の制御をしていきます。  
 アプリケーションの起動や終了や中断などの処理を記載している `ios/[ProjectName]/AppDelegate.m` に下記のように追加します。
 
 ```m
@@ -240,10 +240,10 @@ npx pod-install ios
 
 |||
 |-|-|
-|`mipmap/`| ランチャーアイコン（ホーム画面に表示されるアイコン）|
-|`values/`|文字列、整数、色などの定義<br>`colors.xml`: 色の値の定義用<br>`strings.xml`: 文字列の値の定義用<br>`styles.xml`: スタイルの定義用
-|`drawable/`|リソースをもとに描画| 
-|`layout/`|レイアウト定義用|
+|mipmap/| ランチャーアイコン（ホーム画面に表示されるアイコン）|
+|values/|文字列、整数、色などの定義<br>colors.xml: 色の値の定義用<br>strings.xml: 文字列の値の定義用<br>styles.xml: スタイルの定義用
+|drawable/|画面上に描画するグラフィック| 
+|layout/|レイアウト定義用|
 
 まず、`android/app/src/main/java/.../MainActivity.java` に下記のように追加します。
 
@@ -262,7 +262,7 @@ public class MainActivity extends ReactActivity {
 
 スプラッシュ画面のレイアウトを定義するファイル `res/layout/launch_screen.xml` を作成します。
 
-```xml
+```
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
@@ -272,7 +272,7 @@ public class MainActivity extends ReactActivity {
 ```
 
 スプラッシュ画面を描画するためのファイル`res/drawable/splash_screen.xml` を作成します。
-```xml
+```
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     
@@ -283,7 +283,7 @@ public class MainActivity extends ReactActivity {
 ```
 
 <!--
-```xml
+```
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
@@ -294,7 +294,7 @@ public class MainActivity extends ReactActivity {
 
 スプラッシュスクリーン描画用xmlファイル
 drawable/splash_screen.xml
-```xml
+```
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     
@@ -305,7 +305,7 @@ drawable/splash_screen.xml
 ``` -->
 
 最後に、`res/values/color.xml` に背景色の定義をします。
-```xml
+```
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   ...
@@ -343,8 +343,8 @@ Androidでも起動直後から表示されるよう実装していきます。
 [参考ページ](https://medium.com/@appstud/add-a-splash-screen-to-a-react-native-app-810492e773f9)
 
 
-スプラッシュアクティビティの作成
-SplashActivity.java
+スプラッシュ用のアクティビティ `android/app/src/main/java/.../SplashActivity.java`  を作成します。
+
 ```java
 package [パッケージ名]; // 書き方は他Activityを参考にしてください。
 
@@ -364,19 +364,17 @@ public class SplashActivity extends AppCompatActivity {
 }
 ```
 
-スプラッシュ用アクティビティのテーマの定義
-values/styles.xml
-```xml
+`SplashActivity` 用のテーマの定義を `values/styles.xml` に記述します。
+```
 ...
     <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- <item name="android:statusBarColor">@color/splash_background</item> -->
         <item name="android:background">@drawable/splash_screen</item>
     </style>
 ```
 
-AndroidManifest.xml
+アプリの基本的な情報が書かれているファイル `AndroidManifest.xml` に `SplashActivity` を追加します。
 
-```xml
+```
 ...
 <application>
 
@@ -408,6 +406,7 @@ AndroidManifest.xml
 # アイコン
 
 iOS/Androidともに、様々なサイズのリソースを設定する必要があります。
+今回はサイズ別にアイコンが全て用意されている前提で進めていきます。
 
 ## iOS
 Xcode上で設定していきます。
@@ -422,8 +421,6 @@ Xcode上で設定していきます。
 
 
 ## Android
-デフォルトでアイコンが設定されています。
-`android/app/src/main/res/mipmap-*/`にアイコンを格納します。
 
 ### [画面ピクセル密度（dpi）](https://developer.android.com/training/multiscreen/screendensities?hl=ja)
 
@@ -441,6 +438,7 @@ Androidデバイスは、画面サイズだけでなく、画面のピクセル�
 |xxxhdpi|超超超高密度画面|
 
 リソースの使い分けをするためには、下記のように各グループごとに`mipmap/`ディレクトリを用意し、その中に対応するリソースを格納していきます。
+Androidではプロジェクト作成時にデフォルトアイコンが設定されています。
 
 ```
 mipmap-xxxhdpi/
@@ -462,18 +460,22 @@ mipmap-mdpi/
 
 
 ### [アダプティブ アイコン](https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive?hl=ja)
-Android 8.0（API レベル 26）では、アダプティブ ランチャー アイコンが導入され、デバイスモデルごとに異なる図形を表示できるようになりました。
+Android 8.0（API レベル 26）から、アダプティブ ランチャー アイコンが導入され、デバイスモデルごとに異なる図形を表示できるようになりました。
 アダプティブアイコンに対応した実装をしていきます。
+
+`ic_launcher_foreground.png` と `ic_launcher_background.png`がdpi別に用意されている場合、同じように各ディレクトリに格納しておきます。
 
 `res/mipmap-anydpi-v26/ic_launcher.xml`を作成します。
 
-```xml
+```
 <?xml version="1.0" encoding="utf-8"?>
 <adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
     <background android:drawable="@mipmap/ic_launcher_background" />
     <foreground android:drawable="@mipmap/ic_launcher_foreground" />
 </adaptive-icon>
 ```
+
+今回の場合のアイコン周りのディレクトリ構成は下記のようになります。
 
 ```
 mipmap-anydpi-v26/

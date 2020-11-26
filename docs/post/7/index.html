@@ -23,7 +23,7 @@ public class MainActivity extends ReactActivity {
 
 #### android/app/src/main/res/layout/launch_screen.xml
 
-```xml
+```
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
@@ -35,7 +35,7 @@ public class MainActivity extends ReactActivity {
 
 スプラッシュスクリーン描画用xmlファイル
 drawable/splash_screen.xml
-```xml
+```
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     
@@ -47,7 +47,7 @@ drawable/splash_screen.xml
 
 背景色の定義
 color.xml
-```xml
+```
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   ...
@@ -64,7 +64,7 @@ color.xml
 
 スプラッシュスクリーンアクティビティのテーマの定義
 values/styles.xml
-```xml
+```
 ...
     <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:background">@drawable/splash_screen</item>
@@ -93,7 +93,7 @@ public class SplashActivity extends AppCompatActivity {
 ```
 AndroidManifest.xml
 
-```xml
+```
 ...
     <application>
         <activity
@@ -134,7 +134,7 @@ public class MainActivity extends ReactActivity {
 
 #### android/app/src/main/res/layout/launch_screen.xml
 
-```xml
+```
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
@@ -159,25 +159,25 @@ pod install</code></pre></div>
 <h3>iOS</h3>
 <p>スプラッシュ画面のファイルは <code class="language-text">ios/[プロジェクト名]/LaunchScreen.storyboard</code> です。
 デフォルトでは文字が表示されているので、不要部分を削除し、背景色を変更します。</p>
-<div class="gatsby-highlight" data-language="xml"><pre class="language-xml"><code class="language-xml">...
-<span class="token comment">&lt;!--View Controller--></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scene</span> <span class="token attr-name">sceneID</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>EHf-IW-A2E<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>objects</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>viewController</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>01J-lp-oVM<span class="token punctuation">"</span></span> <span class="token attr-name">sceneMemberID</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewController<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>view<span class="token punctuation">"</span></span> <span class="token attr-name">contentMode</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>scaleToFill<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Ze5-6b-2t3<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-                <span class="token comment">&lt;!-- subviews、constraintsの削除 --></span>
-                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rect</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>frame<span class="token punctuation">"</span></span> <span class="token attr-name">x</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0.0<span class="token punctuation">"</span></span> <span class="token attr-name">y</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0.0<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>375<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>667<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
-                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>autoresizingMask</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>autoresizingMask<span class="token punctuation">"</span></span> <span class="token attr-name">widthSizable</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>YES<span class="token punctuation">"</span></span> <span class="token attr-name">heightSizable</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>YES<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
-                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>viewLayoutGuide</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>safeArea<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Bcu-3y-fUS<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
-                <span class="token comment">&lt;!-- backgroundColorの変更 --></span>
-                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>color</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>backgroundColor<span class="token punctuation">"</span></span> <span class="token attr-name">red</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> <span class="token attr-name">green</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> <span class="token attr-name">blue</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span> <span class="token attr-name">alpha</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span> <span class="token attr-name">colorSpace</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>custom<span class="token punctuation">"</span></span> <span class="token attr-name">customColorSpace</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>sRGB<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>viewController</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>placeholder</span> <span class="token attr-name">placeholderIdentifier</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>IBFirstResponder<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>iYj-Kq-Ea1<span class="token punctuation">"</span></span> <span class="token attr-name">userLabel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>First Responder<span class="token punctuation">"</span></span> <span class="token attr-name">sceneMemberID</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>firstResponder<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>objects</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>point</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>canvasLocation<span class="token punctuation">"</span></span> <span class="token attr-name">x</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>52.173913043478265<span class="token punctuation">"</span></span> <span class="token attr-name">y</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>375<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scene</span><span class="token punctuation">></span></span></code></pre></div>
-<p>次に、画面の制御をしていきます。<br>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">...
+&lt;!--View Controller--&gt;
+&lt;scene sceneID=&quot;EHf-IW-A2E&quot;&gt;
+    &lt;objects&gt;
+        &lt;viewController id=&quot;01J-lp-oVM&quot; sceneMemberID=&quot;viewController&quot;&gt;
+            &lt;view key=&quot;view&quot; contentMode=&quot;scaleToFill&quot; id=&quot;Ze5-6b-2t3&quot;&gt;
+                &lt;!-- subviews、constraintsの削除 --&gt;
+                &lt;rect key=&quot;frame&quot; x=&quot;0.0&quot; y=&quot;0.0&quot; width=&quot;375&quot; height=&quot;667&quot;/&gt;
+                &lt;autoresizingMask key=&quot;autoresizingMask&quot; widthSizable=&quot;YES&quot; heightSizable=&quot;YES&quot;/&gt;
+                &lt;viewLayoutGuide key=&quot;safeArea&quot; id=&quot;Bcu-3y-fUS&quot;/&gt;
+                &lt;!-- backgroundColorの変更 --&gt;
+                &lt;color key=&quot;backgroundColor&quot; red=&quot;0&quot; green=&quot;0&quot; blue=&quot;1&quot; alpha=&quot;1&quot; colorSpace=&quot;custom&quot; customColorSpace=&quot;sRGB&quot;/&gt;
+            &lt;/view&gt;
+        &lt;/viewController&gt;
+        &lt;placeholder placeholderIdentifier=&quot;IBFirstResponder&quot; id=&quot;iYj-Kq-Ea1&quot; userLabel=&quot;First Responder&quot; sceneMemberID=&quot;firstResponder&quot;/&gt;
+    &lt;/objects&gt;
+    &lt;point key=&quot;canvasLocation&quot; x=&quot;52.173913043478265&quot; y=&quot;375&quot;/&gt;
+&lt;/scene&gt;</code></pre></div>
+<p>次に、スプラッシュ画面の制御をしていきます。<br>
 アプリケーションの起動や終了や中断などの処理を記載している <code class="language-text">ios/[ProjectName]/AppDelegate.m</code> に下記のように追加します。</p>
 <div class="gatsby-highlight" data-language="m"><pre class="language-m"><code class="language-m">...
 #import &quot;RNSplashScreen.h&quot; // add
@@ -203,19 +203,19 @@ pod install</code></pre></div>
 </thead>
 <tbody>
 <tr>
-<td><code class="language-text">mipmap/</code></td>
+<td>mipmap/</td>
 <td>ランチャーアイコン（ホーム画面に表示されるアイコン）</td>
 </tr>
 <tr>
-<td><code class="language-text">values/</code></td>
-<td>文字列、整数、色などの定義<br><code class="language-text">colors.xml</code>: 色の値の定義用<br><code class="language-text">strings.xml</code>: 文字列の値の定義用<br><code class="language-text">styles.xml</code>: スタイルの定義用</td>
+<td>values/</td>
+<td>文字列、整数、色などの定義<br>colors.xml: 色の値の定義用<br>strings.xml: 文字列の値の定義用<br>styles.xml: スタイルの定義用</td>
 </tr>
 <tr>
-<td><code class="language-text">drawable/</code></td>
-<td>リソースをもとに描画</td>
+<td>drawable/</td>
+<td>画面上に描画するグラフィック</td>
 </tr>
 <tr>
-<td><code class="language-text">layout/</code></td>
+<td>layout/</td>
 <td>レイアウト定義用</td>
 </tr>
 </tbody>
@@ -232,22 +232,22 @@ pod install</code></pre></div>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre></div>
 <p>スプラッシュ画面のレイアウトを定義するファイル <code class="language-text">res/layout/launch_screen.xml</code> を作成します。</p>
-<div class="gatsby-highlight" data-language="xml"><pre class="language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="utf-8"?></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>LinearLayout</span> <span class="token attr-name"><span class="token namespace">xmlns:</span>android</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://schemas.android.com/apk/res/android<span class="token punctuation">"</span></span>
-    <span class="token attr-name"><span class="token namespace">android:</span>orientation</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>vertical<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">android:</span>layout_width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>match_parent<span class="token punctuation">"</span></span>
-    <span class="token attr-name"><span class="token namespace">android:</span>layout_height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>match_parent<span class="token punctuation">"</span></span>
-    <span class="token attr-name"><span class="token namespace">android:</span>background</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@drawable/splash_screen<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>LinearLayout</span><span class="token punctuation">></span></span></code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    android:orientation=&quot;vertical&quot; android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;match_parent&quot;
+    android:background=&quot;@drawable/splash_screen&quot;&gt;
+&lt;/LinearLayout&gt;</code></pre></div>
 <p>スプラッシュ画面を描画するためのファイル<code class="language-text">res/drawable/splash_screen.xml</code> を作成します。</p>
-<div class="gatsby-highlight" data-language="xml"><pre class="language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="utf-8"?></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>layer-list</span> <span class="token attr-name"><span class="token namespace">xmlns:</span>android</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://schemas.android.com/apk/res/android<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;layer-list xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;
     
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>item</span>
-        <span class="token attr-name"><span class="token namespace">android:</span>drawable</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@color/splash_background<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+    &lt;item
+        android:drawable=&quot;@color/splash_background&quot;/&gt;
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>layer-list</span><span class="token punctuation">></span></span></code></pre></div>
+&lt;/layer-list&gt;</code></pre></div>
 <!--
-```xml
+```
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
@@ -258,7 +258,7 @@ pod install</code></pre></div>
 
 スプラッシュスクリーン描画用xmlファイル
 drawable/splash_screen.xml
-```xml
+```
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     
@@ -268,11 +268,11 @@ drawable/splash_screen.xml
 </layer-list>
 ``` -->
 <p>最後に、<code class="language-text">res/values/color.xml</code> に背景色の定義をします。</p>
-<div class="gatsby-highlight" data-language="xml"><pre class="language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="utf-8"?></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>resources</span><span class="token punctuation">></span></span>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;resources&gt;
   ...
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>color</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>splash_background<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>#0000FF<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>color</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>resources</span><span class="token punctuation">></span></span></code></pre></div>
+    &lt;color name=&quot;splash_background&quot;&gt;#0000FF&lt;/color&gt;
+&lt;/resources&gt;</code></pre></div>
 <h3>JS</h3>
 <p>AndroidとiOSでスプラッシュの表示ができたら、次はJS
 側で任意のタイミングで非表示にします。</p>
@@ -291,8 +291,7 @@ SplashScreen<span class="token punctuation">.</span><span class="token function"
 <p>Androidでも起動直後から表示されるよう実装していきます。</p>
 <h3>Androidで起動直後にスプラッシュを出す</h3>
 <p><a href="https://medium.com/@appstud/add-a-splash-screen-to-a-react-native-app-810492e773f9" target="_blank" rel="noopener noreferrer">参考ページ</a></p>
-<p>スプラッシュアクティビティの作成
-SplashActivity.java</p>
+<p>スプラッシュ用のアクティビティ <code class="language-text">android/app/src/main/java/.../SplashActivity.java</code>  を作成します。</p>
 <div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">package</span> <span class="token punctuation">[</span>パッケージ名<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 書き方は他Activityを参考にしてください。</span>
 
 <span class="token keyword">import</span> <span class="token namespace">android<span class="token punctuation">.</span>content<span class="token punctuation">.</span></span><span class="token class-name">Intent</span><span class="token punctuation">;</span>
@@ -309,41 +308,40 @@ SplashActivity.java</p>
         <span class="token function">finish</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre></div>
-<p>スプラッシュ用アクティビティのテーマの定義
-values/styles.xml</p>
-<div class="gatsby-highlight" data-language="xml"><pre class="language-xml"><code class="language-xml">...
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>SplashTheme<span class="token punctuation">"</span></span> <span class="token attr-name">parent</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Theme.AppCompat.Light.NoActionBar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-        <span class="token comment">&lt;!-- &lt;item name="android:statusBarColor">@color/splash_background&lt;/item> --></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>item</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>android:background<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>@drawable/splash_screen<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>item</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span></code></pre></div>
-<p>AndroidManifest.xml</p>
-<div class="gatsby-highlight" data-language="xml"><pre class="language-xml"><code class="language-xml">...
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>application</span><span class="token punctuation">></span></span>
+<p><code class="language-text">SplashActivity</code> 用のテーマの定義を <code class="language-text">values/styles.xml</code> に記述します。</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">...
+    &lt;style name=&quot;SplashTheme&quot; parent=&quot;Theme.AppCompat.Light.NoActionBar&quot;&gt;
+        &lt;item name=&quot;android:background&quot;&gt;@drawable/splash_screen&lt;/item&gt;
+    &lt;/style&gt;</code></pre></div>
+<p>アプリの基本的な情報が書かれているファイル <code class="language-text">AndroidManifest.xml</code> に <code class="language-text">SplashActivity</code> を追加します。</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">...
+&lt;application&gt;
 
-    <span class="token comment">&lt;!-- SplashActivityの追加、MainActivityのintent-filterを移動 --></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>activity</span>
-      <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>.SplashActivity<span class="token punctuation">"</span></span>
-      <span class="token attr-name"><span class="token namespace">android:</span>theme</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@style/SplashTheme<span class="token punctuation">"</span></span>
-      <span class="token attr-name"><span class="token namespace">android:</span>label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@string/app_name<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>intent-filter</span><span class="token punctuation">></span></span>
-          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>action</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>android.intent.action.MAIN<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>category</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>android.intent.category.LAUNCHER<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>intent-filter</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>activity</span><span class="token punctuation">></span></span>
+    &lt;!-- SplashActivityの追加、MainActivityのintent-filterを移動 --&gt;
+    &lt;activity
+      android:name=&quot;.SplashActivity&quot;
+      android:theme=&quot;@style/SplashTheme&quot;
+      android:label=&quot;@string/app_name&quot;&gt;
+      &lt;intent-filter&gt;
+          &lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;
+          &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt;
+      &lt;/intent-filter&gt;
+    &lt;/activity&gt;
 
-    <span class="token comment">&lt;!-- intent-filterの削除、`android:exported="true"`パラメータの追加 --></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>activity</span>
-      <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>.MainActivity<span class="token punctuation">"</span></span>
-      <span class="token attr-name"><span class="token namespace">android:</span>label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@string/app_name<span class="token punctuation">"</span></span>
-      <span class="token attr-name"><span class="token namespace">android:</span>configChanges</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>keyboard|keyboardHidden|orientation|screenSize<span class="token punctuation">"</span></span>
-      <span class="token attr-name"><span class="token namespace">android:</span>windowSoftInputMode</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>adjustResize<span class="token punctuation">"</span></span>
-      <span class="token attr-name"><span class="token namespace">android:</span>exported</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+    &lt;!-- intent-filterの削除、`android:exported=&quot;true&quot;`パラメータの追加 --&gt;
+    &lt;activity
+      android:name=&quot;.MainActivity&quot;
+      android:label=&quot;@string/app_name&quot;
+      android:configChanges=&quot;keyboard|keyboardHidden|orientation|screenSize&quot;
+      android:windowSoftInputMode=&quot;adjustResize&quot;
+      android:exported=&quot;true&quot;/&gt;
 
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>activity</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>com.facebook.react.devsupport.DevSettingsActivity<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>application</span><span class="token punctuation">></span></span></code></pre></div>
+  &lt;activity android:name=&quot;com.facebook.react.devsupport.DevSettingsActivity&quot; /&gt;
+&lt;/application&gt;</code></pre></div>
 <img src="https://bu-mera.github.io/study/static/911a8aca7ca53044c0a4ff3e9e25979f/sp-and2.gif" width="200">
 <h1>アイコン</h1>
-<p>iOS/Androidともに、様々なサイズのリソースを設定する必要があります。</p>
+<p>iOS/Androidともに、様々なサイズのリソースを設定する必要があります。
+今回はサイズ別にアイコンが全て用意されている前提で進めていきます。</p>
 <h2>iOS</h2>
 <p>Xcode上で設定していきます。</p>
 <p>ターゲット設定の <code class="language-text">General &gt; App Icons and Launch Images &gt; App Icons Source</code> を編集します（右の矢印をクリック）</p>
@@ -351,8 +349,6 @@ values/styles.xml</p>
 <p>素材を各サイズに合わせてドラッグすることで、アイコンの設定は完了します。</p>
 <img src="https://bu-mera.github.io/study/static/2621eacdd91f10326fadefd958641bfd/icon2.png" width="400">
 <h2>Android</h2>
-<p>デフォルトでアイコンが設定されています。
-<code class="language-text">android/app/src/main/res/mipmap-*/</code>にアイコンを格納します。</p>
 <h3><a href="https://developer.android.com/training/multiscreen/screendensities?hl=ja" target="_blank" rel="noopener noreferrer">画面ピクセル密度（dpi）</a></h3>
 <p>Androidデバイスは、画面サイズだけでなく、画面のピクセルサイズも様々あります。
 そのため、各デバイスのピクセルの密度に合わせたリソースを使用する必要があります。
@@ -391,7 +387,8 @@ values/styles.xml</p>
 </tr>
 </tbody>
 </table>
-<p>リソースの使い分けをするためには、下記のように各グループごとに<code class="language-text">mipmap/</code>ディレクトリを用意し、その中に対応するリソースを格納していきます。</p>
+<p>リソースの使い分けをするためには、下記のように各グループごとに<code class="language-text">mipmap/</code>ディレクトリを用意し、その中に対応するリソースを格納していきます。
+Androidではプロジェクト作成時にデフォルトアイコンが設定されています。</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">mipmap-xxxhdpi/
   ic_launcher.png
   ic_launcher_round.png
@@ -408,14 +405,16 @@ mipmap-mdpi/
   ic_launcher.png
   ic_launcher_round.png</code></pre></div>
 <h3><a href="https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive?hl=ja" target="_blank" rel="noopener noreferrer">アダプティブ アイコン</a></h3>
-<p>Android 8.0（API レベル 26）では、アダプティブ ランチャー アイコンが導入され、デバイスモデルごとに異なる図形を表示できるようになりました。
+<p>Android 8.0（API レベル 26）から、アダプティブ ランチャー アイコンが導入され、デバイスモデルごとに異なる図形を表示できるようになりました。
 アダプティブアイコンに対応した実装をしていきます。</p>
+<p><code class="language-text">ic_launcher_foreground.png</code> と <code class="language-text">ic_launcher_background.png</code>がdpi別に用意されている場合、同じように各ディレクトリに格納しておきます。</p>
 <p><code class="language-text">res/mipmap-anydpi-v26/ic_launcher.xml</code>を作成します。</p>
-<div class="gatsby-highlight" data-language="xml"><pre class="language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="utf-8"?></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>adaptive-icon</span> <span class="token attr-name"><span class="token namespace">xmlns:</span>android</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://schemas.android.com/apk/res/android<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>background</span> <span class="token attr-name"><span class="token namespace">android:</span>drawable</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@mipmap/ic_launcher_background<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>foreground</span> <span class="token attr-name"><span class="token namespace">android:</span>drawable</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@mipmap/ic_launcher_foreground<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>adaptive-icon</span><span class="token punctuation">></span></span></code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;adaptive-icon xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;
+    &lt;background android:drawable=&quot;@mipmap/ic_launcher_background&quot; /&gt;
+    &lt;foreground android:drawable=&quot;@mipmap/ic_launcher_foreground&quot; /&gt;
+&lt;/adaptive-icon&gt;</code></pre></div>
+<p>今回の場合のアイコン周りのディレクトリ構成は下記のようになります。</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">mipmap-anydpi-v26/
   ic_launcher.xml
 mipmap-xxxhdpi/
